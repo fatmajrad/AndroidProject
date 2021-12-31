@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProject" >
         <activity
+            android:name=".ChefRegistartion"
+            android:exported="true" />
+        <activity
+            android:name=".DeliveryRegistartion"
+            android:exported="true" />
+        <activity
+            android:name=".DeliveryLogin"
+            android:exported="true" />
+        <activity
+            android:name=".CustomRegistartion"
+            android:exported="true" />
+        <activity
+            android:name=".CustomLogin"
+            android:exported="true" />
+        <activity
+            android:name=".ChefLogin"
+            android:exported="true" />
+        <activity
+            android:name=".ChooseOne"
+            android:exported="true" />
+        <activity
             android:name=".MainMenu"
             android:exported="true" />
         <activity
