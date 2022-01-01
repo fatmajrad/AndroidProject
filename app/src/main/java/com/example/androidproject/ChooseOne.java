@@ -22,15 +22,15 @@ public class ChooseOne extends AppCompatActivity {
         setContentView(R.layout.activity_choose_one);
 
         AnimationDrawable animationDrawable = new AnimationDrawable();
-        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img1),3000);
-        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img2),3000);
-        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img3),3000);
-        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img4),3000);
-        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img5),3000);
-        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img6),3000);
+        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img1),2500);
+        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img2),2500);
+        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img3),2500);
+        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img4),2500);
+        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img5),2500);
+        animationDrawable.addFrame(getResources().getDrawable(R.drawable.img6),2500);
 
         animationDrawable.setOneShot(false);
-        animationDrawable.setEnterFadeDuration(850);
+        animationDrawable.setEnterFadeDuration(500);
         animationDrawable.setExitFadeDuration(1600);
 
         bgimage = findViewById(R.id.back3);

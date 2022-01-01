@@ -7,11 +7,10 @@
     android:background="@drawable/chef"
     tools:context=".ChefRegistartion">
 
+
     <ScrollView
-        android:layout_width="300dp"
+        android:layout_width="350dp"
         android:layout_height="500dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:background="@drawable/backgrond_shape"
         android:orientation="vertical"
         android:padding="15dp"
@@ -21,16 +20,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.436">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/Firstname"
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+                android:fontFamily="@font/aref_ruqaa"
+                android:gravity="center"
+                android:text="اطباق و اذواق"
+                android:textColor="#0C0C0C"
+                android:textSize="20sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Firstname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:endIconMode="clear_text"
+                app:helperText="Required">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -42,6 +64,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Lastname"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp">
@@ -55,6 +78,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp">
@@ -66,10 +90,12 @@
                     android:drawablePadding="10dp"
                     android:hint="Email id"
                     android:inputType="textEmailAddress" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Pwd"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="11dp"
@@ -84,6 +110,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Cpass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -99,26 +126,30 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/Mobileno"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_marginTop="12dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="MobileNumber"
                     android:inputType="number" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <Button
                 android:id="@+id/Signup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:radius="8dp"
                 android:backgroundTint="@android:color/holo_green_dark"
+                android:padding="10dp"
+                android:radius="8dp"
                 android:text="Register"
+                android:fontFamily="serif"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
@@ -144,6 +175,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="7dp"
                     android:layout_weight="1"
+                    android:fontFamily="serif"
                     android:text="OR"
                     android:textAlignment="center"
                     android:textColor="#040404"
@@ -162,6 +194,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:fontFamily="serif"
                 android:text="SignIn with"
                 android:textAlignment="center"
                 android:textColor="#0C0C0C"
@@ -179,13 +212,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/signUp"
                     android:drawableLeft="@drawable/ic_baseline_email_24"
                     android:padding="10dp"
-                    android:textSize="18dp"
+                    android:radius="8dp"
                     android:text="Email"
-                    android:backgroundTint="@color/signUp"
+                    android:fontFamily="serif"
                     android:textColor="#FFFFFF"
-                    android:radius="8dp"/>
+                    android:textSize="20sp" />
 
 
             </LinearLayout>
