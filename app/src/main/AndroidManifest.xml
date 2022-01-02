@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidproject">
 
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,14 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProject">
         <activity
-            android:name=".ChefFoodPanel_BottomNavigation"
-            android:exported="true" >
+            android:name=".DeliveryBottomNavigationBar"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerNavigationBar"
+            android:exported="true" />
+        <activity
+            android:name=".ChefAddDish"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ChefFoodPanel_BottomNavigation"
+            android:exported="true" />
         <activity
             android:name=".ChefRegistartion"
             android:exported="true" />
@@ -46,8 +53,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
