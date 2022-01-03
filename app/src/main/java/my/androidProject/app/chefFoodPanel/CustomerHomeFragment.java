@@ -11,10 +11,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.androidproject.R;
 
-public class CustomerHomeFragment extends Fragment {
+public class CustomerHomeFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
 
     @Nullable
     @Override
@@ -40,12 +41,47 @@ public class CustomerHomeFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onRefresh() {
+       // customermenu();
+    }
+
     /*private void Logout() {
 
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(getActivity(), MainMenu.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-    }*/
+    }
+
+    private void customermenu() {
+
+        swipeRefreshLayout.setRefreshing(true);
+        databaseReference = FirebaseDatabase.getInstance().getReference("FoodDetails").child(State).child(City).child(Area);
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                updateDishModelList.clear();
+                for (DataSnapshot snapshot1 : snapshot.getChildren()){
+                    for(DataSnapshot snapshot2 : snapshot1.getChildren()){
+                        UpdateDishModel updateDishModel = snapshot2.getValue(UpdateDishModel.class);
+                        updateDishModelList.add(updateDishModel);
+                    }
+                }
+                adapter = new CustomerHomeAdapter(getContext(),updateDishModelList);
+                recyclerView.setAdapter(adapter);
+                swipeRefreshLayout.setRefreshing(false);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                swipeRefreshLayout.setRefreshing(false);
+
+            }
+        });
+
+    }
+}*/
+
 }
 

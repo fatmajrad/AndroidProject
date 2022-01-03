@@ -11,12 +11,10 @@
         android:theme="@style/Theme.AndroidProject">
         <activity
             android:name=".DeliveryBottomNavigationBar"
-            android:exported="true" />
+            android:exported="true"/>
+
         <activity
             android:name=".CustomerNavigationBar"
-            android:exported="true" />
-        <activity
-            android:name=".ChefAddDish"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ChefAddDish"
+            android:exported="true"/>
+
         <activity
             android:name=".ChefFoodPanel_BottomNavigation"
             android:exported="true" />

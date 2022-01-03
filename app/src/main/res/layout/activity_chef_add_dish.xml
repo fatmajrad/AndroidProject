@@ -5,137 +5,117 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChefAddDish"
-    android:background="@drawable/backgrond_shape">
+    android:id="@+id/back3"
+    android:background="@drawable/background">
 
-    <ImageButton
-        android:id="@+id/image_upload"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="@drawable/camerashapebtn"
-        android:src="@drawable/ic_baseline_camera_alt_24"
-        app:layout_constraintBottom_toBottomOf="@+id/linear_layout"
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="710dp"
+        android:background="@drawable/backgrond_shape"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363"
-        />
+        app:layout_constraintVertical_bias="0.436">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/linear_layout"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_upload"
-        app:layout_constraintVertical_bias="0.15"
-        app:layout_constraintHorizontal_bias="0.53">
 
-        <TextView
-            android:layout_width="105dp"
-            android:layout_height="30dp"
-            android:id="@+id/textView"
-            android:text="Dish Name"
-            android:textColor="@color/black"
-            android:layout_marginLeft="5dp"
-            android:textSize="18sp" />
-
-        <Spinner
-            android:id="@+id/dishes"
-            android:layout_width="162dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="12dp"
-            android:background="#D0FFFFFF"
-
-            android:entries="@array/DishName" />
-
-    </LinearLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/description"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
-        app:layout_constraintStart_toStartOf="parent"
-       >
-
-        <com.google.android.material.textfield.TextInputEditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Description"
-            android:inputType="text"
-            android:textColor="@color/white"
-            android:textSize="18sp"/>
+            android:orientation="vertical">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/logo" />
 
-    <com.google.android.material.textfield.TextInputLayout
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aref_ruqaa"
+                android:gravity="center"
+                android:text="اطباق و اذواق"
+                android:textColor="#0C0C0C"
+                android:textSize="20sp" />
 
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/Quantity"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description"
-        app:layout_constraintStart_toStartOf="parent"
-        >
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:backgroundTint="@color/browser_actions_bg_grey"
+                android:background="@drawable/camerashapebtn"
+                android:src="@drawable/ic_baseline_camera_alt_24"
+                android:layout_gravity="center"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Quantity"
-            android:inputType="number"
-            android:textColor="@color/white"
-            android:textSize="18sp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dishName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
 
-    </com.google.android.material.textfield.TextInputLayout>
+                app:endIconMode="clear_text">
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/price"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Quantity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.053"
-        app:layout_constraintHorizontal_bias="0.53">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Dish Name"
+                    android:inputType="text" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Price"
-            android:inputType="number"
-            android:textColor="@color/white"
-            android:textSize="18sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pri"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp">
 
-    <Button
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/post"
-        android:backgroundTint="@color/signUp"
-        app:layout_constraintTop_toBottomOf="@id/price"
-        android:text="Post"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.30"
-        app:layout_constraintHorizontal_bias="0.498"
-        android:textSize="20sp"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Price"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/desc"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:drawablePadding="10dp"
+                    android:hint="Dish Description"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
 
 
+            <Button
+                android:id="@+id/post_dish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:padding="10dp"
+                android:radius="8dp"
+                android:text="Add"
+                android:fontFamily="serif"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
